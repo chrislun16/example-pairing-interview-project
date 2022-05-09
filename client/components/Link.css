@@ -1,0 +1,9 @@
+.link {
+  color: cornflowerblue;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.link:hover {
+  color: blue;
+}
