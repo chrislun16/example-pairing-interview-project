@@ -24,7 +24,7 @@ const Register = ({ setLoggedInUser, setRoute }) => {
     }
 
     try {
-      const response = await axios.post('/user', { username });
+      const response = await axios.post('http://localhost:3000/user', { username });
       setLoggedInUser(response.data.user);
       setRoute('profile');
     } catch (error) {

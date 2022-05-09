@@ -19,7 +19,7 @@ const Login = ({ setLoggedInUser, setRoute }) => {
     event.preventDefault();
 
     try {
-      const response = await axios.get(`/user/${username}`);
+      const response = await axios.get(`http://localhost:3000/user/${username}`);
       setLoggedInUser(response.data.user);
       setRoute('profile');
     } catch (e) {

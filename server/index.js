@@ -4,7 +4,9 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { Low, JSONFile } from 'lowdb';
 import { v4 as uuidv4 } from 'uuid';
+import cors from 'cors';
 
+// set up lowdb
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dbFile = join(__dirname, '../db.json');
 const dbAdapter = new JSONFile(dbFile);
@@ -17,6 +19,8 @@ if (!db.data) {
 }
 
 const app = express();
+
+app.use(cors());
 
 // set up express to serve JSON
 app.use(express.json());

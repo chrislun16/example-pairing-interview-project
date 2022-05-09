@@ -1,5 +1,6 @@
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -10,6 +11,7 @@ export default {
   output: {
     path: path.join(__dirname, 'client/build'),
     filename: 'bundle.js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css'],
@@ -29,4 +31,10 @@ export default {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'client/index.html'),
+      filename: 'index.html'
+    })
+  ]
 };
