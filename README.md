@@ -11,7 +11,7 @@ Please make sure that you are able to run this project on your machine before yo
   - run `npm -v` to check your current version
 
 ## Running the project
-This project uses [nodemon](https://nodemon.io/) to run the server and [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) to build and serve the client. Run `npm install` to install dependencies, then `npm run start` to start the project. You can also start the server and client separately using `npm run start:server` and `npm run start:client`, respectively.
+This project uses [nodemon](https://nodemon.io/) to run the server and [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) to build and serve the client. Run `npm install` to install dependencies, then `npm run start` to start the project. You can also start the server and client separately using `npm run start:server` and `npm run start:client`, respectively. The server runs on `localhost:3000`, the client on `localhost:8080`.
 
 ## The App
 This is an extremely simple web app consisting of a NodeJS Express server and a React client. It allows a user to create an account for the application and log in/out.
