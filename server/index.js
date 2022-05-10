@@ -77,21 +77,6 @@ app.post('/user', async (request, response) => {
   // respond with the newly created user
   response.json({ user: newUser })
   return;
-})
-
-// serve our react client
-app.get('/', (req, res) => {
-  const resolvedPath = path.resolve('./client' + req.url);
-
-  fs.stat(resolvedPath, (err, stats) => {
-    if (!err && stats.isFile()) {
-      res.sendFile(resolvedPath);
-      return;
-    } else {
-      res.sendFile('index.html');
-      return;
-    }
-  })
 });
 
 // listen for requests
