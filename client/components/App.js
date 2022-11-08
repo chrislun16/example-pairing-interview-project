@@ -27,6 +27,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <h4> added by ezra</h4>
       {renderRoute()}
     </div>
   );
